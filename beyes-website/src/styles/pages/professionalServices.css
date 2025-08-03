@@ -1,0 +1,472 @@
+/* Professional Services Page Styles */
+.professional-services-page {
+  min-height: 100vh;
+  background: #f8f9fa;
+}
+
+/* Professional Solutions Section */
+.professional-solutions-section {
+  padding: 5rem 0;
+  background: white;
+}
+
+.professional-solutions-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.professional-solutions-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.professional-solutions-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.professional-solutions-highlight {
+  color: #f57c00;
+  position: relative;
+}
+
+.professional-solutions-highlight::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #f57c00;
+}
+
+.professional-solutions-subtitle {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #666;
+}
+
+.professional-solutions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+
+/* Professional Solution Card */
+.professional-solution-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  border: 1px solid #f0f0f0;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.professional-solution-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #f57c00, #ff9800, #ff5722, #e65100);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.professional-solution-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.professional-solution-card:hover::before {
+  opacity: 1;
+}
+
+.professional-solution-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.professional-solution-icon {
+  width: 80px;
+  height: 80px;
+  background: #f57c00;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  color: white;
+  font-size: 2rem;
+  box-shadow: 0 8px 25px rgba(245, 124, 0, 0.3);
+}
+
+.professional-solution-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.professional-solution-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #666;
+  margin: 0;
+}
+
+.professional-solution-content {
+  margin-bottom: 2rem;
+}
+
+.professional-solution-subtitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.professional-solution-long-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.professional-solution-features,
+.professional-solution-benefits {
+  margin-bottom: 1.5rem;
+}
+
+.professional-features-list,
+.professional-benefits-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.professional-feature-item,
+.professional-benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.professional-feature-icon {
+  color: #4caf50;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.professional-benefit-icon {
+  color: #2196f3;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.professional-solution-cta {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.professional-demo-btn,
+.professional-quote-btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.professional-demo-btn {
+  background: #f57c00;
+  color: white;
+}
+
+.professional-demo-btn:hover {
+  background: #e65100;
+  transform: translateY(-2px);
+}
+
+.professional-quote-btn {
+  background: transparent;
+  color: #f57c00;
+  border: 2px solid #f57c00;
+}
+
+.professional-quote-btn:hover {
+  background: #f57c00;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Technology Stack Section */
+.professional-tech-stack-section {
+  padding: 5rem 0;
+  background: #f8f9fa;
+}
+
+.professional-tech-stack-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.professional-tech-stack-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.professional-tech-stack-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.professional-tech-stack-highlight {
+  color: #f57c00;
+  position: relative;
+}
+
+.professional-tech-stack-highlight::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #f57c00;
+}
+
+.professional-tech-stack-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.professional-tech-stack-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.professional-tech-item {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.professional-tech-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.professional-tech-icon {
+  width: 60px;
+  height: 60px;
+  color: #f57c00;
+  margin-bottom: 1rem;
+}
+
+.professional-tech-item h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.professional-tech-item p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+}
+
+/* CTA Section */
+.professional-cta-section {
+  background: linear-gradient(135deg, #333 0%, #1a1a1a 100%);
+  color: white;
+  padding: 5rem 0;
+}
+
+.professional-cta-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.professional-cta-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.professional-cta-highlight {
+  color: #f57c00;
+  position: relative;
+}
+
+.professional-cta-highlight::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #f57c00;
+}
+
+.professional-cta-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+  opacity: 0.9;
+}
+
+.professional-cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.professional-cta-btn {
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.professional-cta-btn-primary {
+  background: #f57c00;
+  color: white;
+  box-shadow: 0 4px 15px rgba(245, 124, 0, 0.3);
+}
+
+.professional-cta-btn-primary:hover {
+  background: #e65100;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(245, 124, 0, 0.4);
+}
+
+.professional-cta-btn-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.professional-cta-btn-secondary:hover {
+  background: white;
+  color: #333;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .professional-solutions-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .professional-tech-stack-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .professional-solutions-title {
+    font-size: 2.5rem;
+  }
+  
+  .professional-solutions-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .professional-tech-stack-title,
+  .professional-cta-title {
+    font-size: 2rem;
+  }
+  
+  .professional-solution-card {
+    padding: 2rem;
+  }
+  
+  .professional-solution-title {
+    font-size: 1.6rem;
+  }
+  
+  .professional-tech-stack-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .professional-cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .professional-cta-btn {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .professional-solutions-title {
+    font-size: 2rem;
+  }
+  
+  .professional-solution-card {
+    padding: 1.5rem;
+  }
+  
+  .professional-solution-title {
+    font-size: 1.4rem;
+  }
+  
+  .professional-solution-cta {
+    flex-direction: column;
+  }
+  
+  .professional-demo-btn,
+  .professional-quote-btn {
+    width: 100%;
+  }
+  
+  .professional-tech-item {
+    padding: 1.5rem;
+  }
+  
+  .professional-tech-icon {
+    width: 50px;
+    height: 50px;
+  }
+} 

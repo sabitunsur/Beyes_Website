@@ -1,0 +1,535 @@
+/* AI Technologies Page Styles */
+.ai-technologies-page {
+  min-height: 100vh;
+  background: #f8f9fa;
+}
+
+
+.ai-hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.ai-hero-highlight {
+  color: #ffd700;
+  position: relative;
+}
+
+.ai-hero-highlight::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #ffd700;
+}
+
+.ai-hero-description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin-bottom: 3rem;
+  opacity: 0.95;
+}
+
+.ai-hero-stats {
+  display: flex;
+  gap: 3rem;
+  justify-content: flex-start;
+}
+
+.ai-stat {
+  text-align: center;
+}
+
+.ai-stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffd700;
+  margin-bottom: 0.5rem;
+}
+
+.ai-stat-label {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* AI Solutions Section */
+.ai-solutions-section {
+  padding: 5rem 0;
+  background: white;
+}
+
+.ai-solutions-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.ai-solutions-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.ai-solutions-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.ai-solutions-highlight {
+  color: #d32f2f;
+  position: relative;
+}
+
+.ai-solutions-highlight::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #d32f2f;
+}
+
+.ai-solutions-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.ai-solutions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+
+/* AI Solution Card */
+.ai-solution-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  border: 1px solid #f0f0f0;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.ai-solution-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #d32f2f, #1976d2, #388e3c, #f57c00);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.ai-solution-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.ai-solution-card:hover::before {
+  opacity: 1;
+}
+
+.ai-solution-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.ai-solution-icon {
+  width: 80px;
+  height: 80px;
+  background: #d32f2f;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  color: white;
+  font-size: 2rem;
+  box-shadow: 0 8px 25px rgba(211, 47, 47, 0.3);
+}
+
+.ai-solution-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.ai-solution-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #666;
+  margin: 0;
+}
+
+.ai-solution-content {
+  margin-bottom: 2rem;
+}
+
+.ai-solution-subtitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.ai-solution-long-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.ai-solution-features,
+.ai-solution-benefits {
+  margin-bottom: 1.5rem;
+}
+
+.ai-features-list,
+.ai-benefits-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ai-feature-item,
+.ai-benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.ai-feature-icon {
+  color: #4caf50;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.ai-benefit-icon {
+  color: #2196f3;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.ai-solution-cta {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.ai-demo-btn,
+.ai-quote-btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ai-demo-btn {
+  background: #d32f2f;
+  color: white;
+}
+
+.ai-demo-btn:hover {
+  background: #b71c1c;
+  transform: translateY(-2px);
+}
+
+.ai-quote-btn {
+  background: transparent;
+  color: #d32f2f;
+  border: 2px solid #d32f2f;
+}
+
+.ai-quote-btn:hover {
+  background: #d32f2f;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Technology Stack Section */
+.ai-tech-stack-section {
+  padding: 5rem 0;
+  background: #f8f9fa;
+}
+
+.ai-tech-stack-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.ai-tech-stack-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.ai-tech-stack-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.ai-tech-stack-highlight {
+  color: #d32f2f;
+  position: relative;
+}
+
+.ai-tech-stack-highlight::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #d32f2f;
+}
+
+.ai-tech-stack-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.ai-tech-stack-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.ai-tech-item {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.ai-tech-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.ai-tech-icon {
+  width: 60px;
+  height: 60px;
+  color: #d32f2f;
+  margin-bottom: 1rem;
+}
+
+.ai-tech-item h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.ai-tech-item p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+}
+
+/* CTA Section */
+.ai-cta-section {
+  background: linear-gradient(135deg, #333 0%, #1a1a1a 100%);
+  color: white;
+  padding: 5rem 0;
+}
+
+.ai-cta-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.ai-cta-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.ai-cta-highlight {
+  color: #d32f2f;
+  position: relative;
+}
+
+.ai-cta-highlight::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #d32f2f;
+}
+
+.ai-cta-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+  opacity: 0.9;
+}
+
+.ai-cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ai-cta-btn {
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ai-cta-btn-primary {
+  background: #d32f2f;
+  color: white;
+  box-shadow: 0 4px 15px rgba(211, 47, 47, 0.3);
+}
+
+.ai-cta-btn-primary:hover {
+  background: #b71c1c;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(211, 47, 47, 0.4);
+}
+
+.ai-cta-btn-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.ai-cta-btn-secondary:hover {
+  background: white;
+  color: #333;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .ai-solutions-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .ai-tech-stack-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .ai-hero-stats {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .ai-hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .ai-hero-description {
+    font-size: 1.1rem;
+  }
+  
+  .ai-solutions-title,
+  .ai-tech-stack-title,
+  .ai-cta-title {
+    font-size: 2rem;
+  }
+  
+  .ai-solution-card {
+    padding: 2rem;
+  }
+  
+  .ai-solution-title {
+    font-size: 1.6rem;
+  }
+  
+  .ai-hero-stats {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .ai-tech-stack-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .ai-cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .ai-cta-btn {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .ai-hero-title {
+    font-size: 2rem;
+  }
+  
+  .ai-solution-card {
+    padding: 1.5rem;
+  }
+  
+  .ai-solution-title {
+    font-size: 1.4rem;
+  }
+  
+  .ai-solution-cta {
+    flex-direction: column;
+  }
+  
+  .ai-demo-btn,
+  .ai-quote-btn {
+    width: 100%;
+  }
+  
+  .ai-tech-item {
+    padding: 1.5rem;
+  }
+  
+  .ai-tech-icon {
+    width: 50px;
+    height: 50px;
+  }
+} 

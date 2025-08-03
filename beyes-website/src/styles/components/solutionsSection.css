@@ -1,0 +1,251 @@
+/* Solutions Section - Professional Design */
+.solutionsSection {
+  padding: 5rem 2rem;
+  background: #d4d0d0;
+  font-family: 'Roboto', sans-serif; /* Added Roboto font family */
+}
+
+.solutions__title {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 3rem;
+  padding-left: 2rem;
+}
+
+.double-arrow {
+  font-size: 2rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.solutions__heading {
+  font-size: 2.2rem;
+  background: linear-gradient(135deg, #d32f2f 0%, #b71c1c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 0 1px 2px rgba(211, 47, 47, 0.1);
+  letter-spacing: 0.5px;
+}
+
+.solutions__line {
+  width: 2px;
+  height: 1.8rem;
+  background-color: #d32f2f;
+  margin-left: 0.4rem;
+}
+
+.solutions__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  height: 500px;
+}
+
+.solution__card {
+  position: relative;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  perspective: 1000px;
+}
+
+.solution__card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.solution__card:hover .card__inner {
+  transform: rotateY(180deg);
+}
+
+.card__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.card__front,
+.card__back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card__back {
+  transform: rotateY(180deg);
+  background: #d32f2f;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  border: none;
+  outline: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card__background {
+  position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.card__background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+.card__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card__content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 1.5rem;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.card__content h3,
+.card__back-content h3 {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0;
+  text-align: center;
+  font-family: 'Roboto', sans-serif; /* Changed to Roboto */
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+.card__back-content {
+  text-align: center;
+  color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 2rem;
+  margin-left: 5rem;
+}
+
+.card__back-content h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0 0 2rem 0;
+  font-family: 'Arial', sans-serif;
+  text-transform: uppercase;
+  text-align: left;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+.card__details {
+  flex-grow: 1;
+  text-align: left;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.card__details p {
+  color: white;
+  font-size: 1.2rem;
+  margin: 0.8rem 0;
+  font-family: 'Roboto', sans-serif; /* Changed to Roboto */
+  font-weight: 500;
+  line-height: 1.6;
+  text-align: left;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.card__details p::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Ensure button is at the bottom */
+.learn-more-btn {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Roboto', sans-serif; /* Changed to Roboto */
+  align-self: center;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  margin-right: 10rem;
+}
+
+.learn-more-btn:hover {
+  background: rgba(255, 255, 255, 0.932);
+  color: #d32f2f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .solutions__grid {
+    grid-template-columns: repeat(2, 1fr);
+    height: 400px;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .solutions__grid {
+    grid-template-columns: 1fr;
+    height: 300px;
+    gap: 1rem;
+  }
+
+  .card__content h3,
+  .card__back-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .card__content {
+    padding: 1.5rem 1rem;
+  }
+
+  .card__back {
+    padding: 1.5rem;
+  }
+
+  .card__details p {
+    font-size: 1rem;
+  }
+}

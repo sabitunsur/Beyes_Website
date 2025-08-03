@@ -1,0 +1,153 @@
+/* Stats Section Styles - Clean Design */
+.statsSection {
+  background: url('../../assets/image/home/countbg.jpeg') no-repeat center center;
+  background-size: cover;
+  color: white;
+  padding: 6rem 0;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.statsSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.stats__container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+/* Statistics Grid */
+.stats__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.stats__item {
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.stats__item:hover {
+  transform: translateY(-5px);
+}
+
+.stats__icon {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.stats__item h3 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.stats__item p {
+  font-size: 1.3rem;
+  opacity: 0.9;
+  margin: 0;
+  font-weight: 500;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .stats__grid {
+    gap: 2.5rem;
+    margin-left: auto;
+    margin-right: 0;
+  }
+  
+  .stats__item h3 {
+    font-size: 3rem;
+  }
+  
+  .stats__icon {
+    font-size: 3rem;
+  }
+  
+  .stats__item p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .stats__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-left: auto;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .statsSection {
+    padding: 4rem 0;
+  }
+  
+  .stats__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-left: auto;
+    margin-right: 0;
+  }
+  
+  .stats__item h3 {
+    font-size: 2.5rem;
+  }
+  
+  .stats__item p {
+    font-size: 1.1rem;
+  }
+  
+  .stats__icon {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .statsSection {
+    padding: 3rem 0;
+  }
+  
+  .stats__container {
+    padding: 0 1rem;
+  }
+  
+  .stats__item h3 {
+    font-size: 2rem;
+  }
+  
+  .stats__item p {
+    font-size: 1rem;
+  }
+  
+  .stats__icon {
+    font-size: 2rem;
+  }
+}
+
