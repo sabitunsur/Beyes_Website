@@ -16,7 +16,6 @@ import {
   Timeline,
   Settings,
   School,
-  Storage,
   Nature,
   Support,
   Business,
@@ -508,5 +507,617 @@ export const productsData = {
       { label: 'Güvenlik', value: 'SSL/TLS, OAuth 2.0' },
       { label: 'Mobil Uygulama', value: 'iOS, Android' }
     ]
-  }
-}; 
+  },
+  besens: {
+    name: 'BeSens',
+    subtitle: 'Kestirimci Bakım',
+    description: 'IoT sensörleri ve yapay zeka ile ekipmanlarınızı izleyin, arızaları önceden tahmin edin. BeSens ile bakım maliyetlerinizi azaltın ve ekipman ömrünü uzatın.',
+    icon: Memory,
+    features: [
+      {
+        icon: <Memory />,
+        title: 'IoT Sensör Entegrasyonu',
+        description: 'Çeşitli IoT sensörlerini entegre ederek ekipman durumunu izler.'
+      },
+      {
+        icon: <Analytics />,
+        title: 'Arıza Tahmin Algoritmaları',
+        description: 'Yapay zeka destekli algoritmalar ile arızaları önceden tahmin eder.'
+      },
+      {
+        icon: <Timeline />,
+        title: 'Planlı Bakım Optimizasyonu',
+        description: 'Bakım planlarını optimize ederek maliyetleri azaltır.'
+      },
+      {
+        icon: <Dashboard />,
+        title: 'Ekipman Sağlığı İzleme',
+        description: 'Ekipmanların sağlık durumunu gerçek zamanlı olarak takip eder.'
+      },
+      {
+        icon: <TrendingUp />,
+        title: 'Performans Trend Analizi',
+        description: 'Geçmiş verileri analiz ederek performans trendlerini belirler.'
+      },
+      {
+        icon: <Warning />,
+        title: 'Otomatik Uyarı Sistemi',
+        description: 'Kritik durumlar için otomatik uyarı sistemi.'
+      }
+    ],
+    benefits: [
+      {
+        icon: <CheckCircle />,
+        title: 'Planlanmamış Duruşları Önler',
+        description: 'Proaktif bakım ile planlanmamış duruşları minimize eder.'
+      },
+      {
+        icon: <TrendingUp />,
+        title: 'Bakım Maliyetlerini Azaltır',
+        description: 'Optimize edilmiş bakım planları ile maliyetleri düşürür.'
+      },
+      {
+        icon: <Security />,
+        title: 'Ekipman Ömrünü Uzatır',
+        description: 'Düzenli bakım ve izleme ile ekipman ömrünü uzatır.'
+      },
+      {
+        icon: <Speed />,
+        title: 'Operasyonel Verimliliği Artırır',
+        description: 'Kesintisiz operasyon ile verimliliği artırır.'
+      }
+    ],
+    technicalSpecs: [
+      { label: 'Sensör Desteği', value: 'Sıcaklık, Titreşim, Basınç, Akım' },
+      { label: 'Tahmin Doğruluğu', value: '%95+' },
+      { label: 'Veri Saklama', value: '10 yıl' },
+      { label: 'API Desteği', value: 'REST, MQTT, OPC UA' },
+      { label: 'Güvenlik', value: 'SSL/TLS, End-to-End Encryption' },
+             { label: 'Mobil Uygulama', value: 'iOS, Android' }
+     ]
+   },
+   beroad: {
+     name: 'BeRoad',
+     subtitle: 'Yol Bilgilendirme Sistemi',
+     description: 'Akıllı yol bilgilendirme sistemi ile trafik akışını optimize edin ve sürücü deneyimini iyileştirin. BeRoad ile güvenli ve verimli ulaşım sağlayın.',
+     icon: DirectionsCar,
+     features: [
+       {
+         icon: <Dashboard />,
+         title: 'Gerçek Zamanlı Trafik Bilgisi',
+         description: 'Trafik durumunu gerçek zamanlı olarak izler ve raporlar.'
+       },
+       {
+         icon: <Settings />,
+         title: 'Dinamik İşaretleme',
+         description: 'Trafik durumuna göre dinamik işaretleme sistemi.'
+       },
+       {
+         icon: <Analytics />,
+         title: 'Hava Durumu Entegrasyonu',
+         description: 'Hava durumu verilerini trafik yönetimine entegre eder.'
+       },
+       {
+         icon: <Warning />,
+         title: 'Kaza Uyarıları',
+         description: 'Kaza durumlarında otomatik uyarı sistemi.'
+       },
+       {
+         icon: <Timeline />,
+         title: 'Rota Önerileri',
+         description: 'En optimal rotaları belirler ve önerir.'
+       },
+       {
+         icon: <Speed />,
+         title: 'Mobil Uygulama',
+         description: 'Sürücüler için mobil uygulama desteği.'
+       }
+     ],
+     benefits: [
+       {
+         icon: <TrendingUp />,
+         title: 'Trafik Akışını İyileştirir',
+         description: 'Akıllı yönetim ile trafik akışını optimize eder.'
+       },
+       {
+         icon: <Security />,
+         title: 'Güvenliği Artırır',
+         description: 'Gerçek zamanlı bilgilendirme ile güvenliği artırır.'
+       },
+       {
+         icon: <Speed />,
+         title: 'Zaman Tasarrufu Sağlar',
+         description: 'Optimize edilmiş rotalar ile zaman tasarrufu sağlar.'
+       },
+       {
+         icon: <CheckCircle />,
+         title: 'Sürücü Deneyimini İyileştirir',
+         description: 'Kullanıcı dostu arayüz ile sürücü deneyimini iyileştirir.'
+       }
+     ],
+     technicalSpecs: [
+       { label: 'Kapsama Alanı', value: 'Şehir Geneli' },
+       { label: 'İzleme Frekansı', value: 'Gerçek zamanlı' },
+       { label: 'Sensör Sayısı', value: 'Sınırsız' },
+       { label: 'Veri Saklama', value: '5 yıl' },
+       { label: 'API Desteği', value: 'REST, GraphQL' },
+       { label: 'Güvenlik', value: 'SSL/TLS, VPN' }
+     ]
+   },
+   beflood: {
+     name: 'BeFlood',
+     subtitle: 'Su Taşkını Önleme ve Bilgilendirme Sistemi',
+     description: 'Su seviyesi izleme ve erken uyarı sistemi ile taşkın riskini minimize edin. BeFlood ile can ve mal güvenliğini sağlayın.',
+     icon: Nature,
+     features: [
+       {
+         icon: <Analytics />,
+         title: 'Su Seviyesi İzleme',
+         description: 'Su seviyelerini gerçek zamanlı olarak izler.'
+       },
+       {
+         icon: <Warning />,
+         title: 'Erken Uyarı Sistemi',
+         description: 'Taşkın riski durumunda erken uyarı sistemi.'
+       },
+       {
+         icon: <Dashboard />,
+         title: 'Risk Analizi',
+         description: 'Taşkın riskini analiz eder ve değerlendirir.'
+       },
+       {
+         icon: <Timeline />,
+         title: 'Otomatik Bildirimler',
+         description: 'Kritik durumlar için otomatik bildirim sistemi.'
+       },
+       {
+         icon: <Settings />,
+         title: 'Harita Entegrasyonu',
+         description: 'Coğrafi bilgi sistemleri ile harita entegrasyonu.'
+       },
+       {
+         icon: <Speed />,
+         title: 'Mobil Uygulama',
+         description: 'Vatandaşlar için mobil uygulama desteği.'
+       }
+     ],
+     benefits: [
+       {
+         icon: <Security />,
+         title: 'Taşkın Riskini Azaltır',
+         description: 'Erken uyarı sistemi ile taşkın riskini minimize eder.'
+       },
+       {
+         icon: <CheckCircle />,
+         title: 'Can Güvenliğini Artırır',
+         description: 'Zamanında uyarı ile can güvenliğini artırır.'
+       },
+       {
+         icon: <TrendingUp />,
+         title: 'Maddi Kayıpları Önler',
+         description: 'Proaktif önlemler ile maddi kayıpları önler.'
+       },
+       {
+         icon: <Speed />,
+         title: 'Hızlı Müdahale',
+         description: 'Gerçek zamanlı izleme ile hızlı müdahale imkanı.'
+       }
+     ],
+     technicalSpecs: [
+       { label: 'Sensör Desteği', value: 'Su Seviyesi, Yağış, Nem' },
+       { label: 'İzleme Frekansı', value: 'Gerçek zamanlı' },
+       { label: 'Uyarı Süresi', value: '< 5 dakika' },
+       { label: 'Veri Saklama', value: '10 yıl' },
+       { label: 'API Desteği', value: 'REST, MQTT' },
+       { label: 'Güvenlik', value: 'SSL/TLS, End-to-End Encryption' }
+     ]
+   },
+   bepopup: {
+     name: 'BePopup',
+     subtitle: 'Online Eğitim ve Sınav Yönetim Yazılımı',
+     description: 'Dijital eğitim platformu ile uzaktan eğitim süreçlerinizi yönetin ve öğrenci performansını takip edin. BePopup ile eğitim kalitesini artırın.',
+     icon: School,
+     features: [
+       {
+         icon: <Dashboard />,
+         title: 'Online Ders Yönetimi',
+         description: 'Canlı ve kayıtlı ders yönetimi sistemi.'
+       },
+       {
+         icon: <Analytics />,
+         title: 'Sınav Sistemi',
+         description: 'Online sınav oluşturma ve değerlendirme sistemi.'
+       },
+       {
+         icon: <Timeline />,
+         title: 'Öğrenci Takibi',
+         description: 'Öğrenci performansını detaylı olarak takip eder.'
+       },
+       {
+         icon: <Settings />,
+         title: 'İçerik Yönetimi',
+         description: 'Eğitim içeriklerini organize eder ve yönetir.'
+       },
+       {
+         icon: <CheckCircle />,
+         title: 'Raporlama',
+         description: 'Detaylı raporlar ile eğitim performansını analiz eder.'
+       },
+       {
+         icon: <Speed />,
+         title: 'Mobil Uygulama',
+         description: 'Öğrenciler için mobil uygulama desteği.'
+       }
+     ],
+     benefits: [
+       {
+         icon: <TrendingUp />,
+         title: 'Eğitim Kalitesini Artırır',
+         description: 'İnteraktif özellikler ile eğitim kalitesini artırır.'
+       },
+       {
+         icon: <CheckCircle />,
+         title: 'Maliyetleri Düşürür',
+         description: 'Uzaktan eğitim ile maliyetleri azaltır.'
+       },
+       {
+         icon: <Security />,
+         title: 'Erişilebilirliği Artırır',
+         description: '7/24 erişim ile eğitim erişilebilirliğini artırır.'
+       },
+       {
+         icon: <Speed />,
+         title: 'Performans Takibi',
+         description: 'Gerçek zamanlı performans takibi sağlar.'
+       }
+     ],
+     technicalSpecs: [
+       { label: 'Eş Zamanlı Kullanıcı', value: '10,000+' },
+       { label: 'Video Kalitesi', value: '4K Ultra HD' },
+       { label: 'Sınav Türleri', value: 'Çoktan Seçmeli, Açık Uçlu' },
+       { label: 'Veri Saklama', value: 'Sınırsız' },
+       { label: 'API Desteği', value: 'REST, WebSocket' },
+       { label: 'Güvenlik', value: 'SSL/TLS, 2FA' }
+     ]
+   },
+   ippdu: {
+     name: 'IPPDU',
+     subtitle: 'Akıllı IP PDU',
+     description: 'Akıllı güç dağıtım ünitesi ile enerji yönetimini optimize edin ve güvenliği artırın. IPPDU ile veri merkezi güvenliğini sağlayın.',
+     icon: Bolt,
+     features: [
+       {
+         icon: <Settings />,
+         title: 'Uzaktan Yönetim',
+         description: 'Güç dağıtım ünitelerini uzaktan yönetir.'
+       },
+       {
+         icon: <Analytics />,
+         title: 'Güç İzleme',
+         description: 'Güç tüketimini gerçek zamanlı olarak izler.'
+       },
+       {
+         icon: <Warning />,
+         title: 'Otomatik Kesme',
+         description: 'Aşırı yük durumunda otomatik kesme sistemi.'
+       },
+       {
+         icon: <Dashboard />,
+         title: 'Alarm Sistemi',
+         description: 'Kritik durumlar için alarm sistemi.'
+       },
+       {
+         icon: <Timeline />,
+         title: 'Enerji Analizi',
+         description: 'Detaylı enerji analizi ve raporlama.'
+       },
+       {
+         icon: <Security />,
+         title: 'Güvenlik',
+         description: 'Gelişmiş güvenlik protokolleri.'
+       }
+     ],
+     benefits: [
+       {
+         icon: <TrendingUp />,
+         title: 'Enerji Tasarrufu Sağlar',
+         description: 'Optimize edilmiş güç yönetimi ile tasarruf sağlar.'
+       },
+       {
+         icon: <Security />,
+         title: 'Güvenliği Artırır',
+         description: 'Gelişmiş güvenlik özellikleri ile güvenliği artırır.'
+       },
+       {
+         icon: <CheckCircle />,
+         title: 'Maliyetleri Düşürür',
+         description: 'Verimli enerji kullanımı ile maliyetleri azaltır.'
+       },
+       {
+         icon: <Speed />,
+         title: 'Uzaktan Kontrol',
+         description: 'Uzaktan yönetim ile operasyonel verimliliği artırır.'
+       }
+     ],
+     technicalSpecs: [
+       { label: 'Güç Kapasitesi', value: '1-100kW' },
+       { label: 'Voltaj Desteği', value: '110V-480V' },
+       { label: 'İzleme Frekansı', value: 'Gerçek zamanlı' },
+       { label: 'API Desteği', value: 'SNMP, REST' },
+       { label: 'Güvenlik', value: 'SSL/TLS, SSH' },
+       { label: 'Mobil Uygulama', value: 'iOS, Android' }
+     ]
+   },
+   smartwork: {
+     name: 'Smart Work',
+     subtitle: 'Carbon Ayakizi ve Atık Takibi',
+     description: 'Sürdürülebilirlik odaklı çözümler ile karbon ayak izinizi azaltın ve atık yönetimini optimize edin. Smart Work ile çevresel etkinizi minimize edin.',
+     icon: Nature,
+     features: [
+       {
+         icon: <Analytics />,
+         title: 'Karbon Ayak İzi Hesaplama',
+         description: 'Karbon ayak izini otomatik olarak hesaplar.'
+       },
+       {
+         icon: <Timeline />,
+         title: 'Atık Takibi',
+         description: 'Atık üretimini ve yönetimini takip eder.'
+       },
+       {
+         icon: <Dashboard />,
+         title: 'Sürdürülebilirlik Raporları',
+         description: 'Detaylı sürdürülebilirlik raporları oluşturur.'
+       },
+       {
+         icon: <Settings />,
+         title: 'Hedef Belirleme',
+         description: 'Sürdürülebilirlik hedefleri belirler ve takip eder.'
+       },
+       {
+         icon: <TrendingUp />,
+         title: 'Performans Analizi',
+         description: 'Çevresel performansı analiz eder ve raporlar.'
+       },
+       {
+         icon: <Speed />,
+         title: 'Mobil Uygulama',
+         description: 'Çalışanlar için mobil uygulama desteği.'
+       }
+     ],
+     benefits: [
+       {
+         icon: <Nature />,
+         title: 'Çevresel Etkiyi Azaltır',
+         description: 'Sürdürülebilir uygulamalar ile çevresel etkiyi azaltır.'
+       },
+       {
+         icon: <CheckCircle />,
+         title: 'Maliyetleri Düşürür',
+         description: 'Verimli kaynak kullanımı ile maliyetleri azaltır.'
+       },
+       {
+         icon: <Security />,
+         title: 'Sürdürülebilirlik',
+         description: 'Sürdürülebilir iş süreçleri oluşturur.'
+       },
+       {
+         icon: <TrendingUp />,
+         title: 'Regülasyon Uyumluluğu',
+         description: 'Çevresel regülasyonlara uyumluluğu sağlar.'
+       }
+     ],
+     technicalSpecs: [
+       { label: 'Karbon Hesaplama', value: 'ISO 14064 Uyumlu' },
+       { label: 'Atık Kategorileri', value: '10+ Kategori' },
+       { label: 'Raporlama', value: 'Günlük, Haftalık, Aylık' },
+       { label: 'Veri Saklama', value: '10 yıl' },
+       { label: 'API Desteği', value: 'REST, GraphQL' },
+       { label: 'Güvenlik', value: 'SSL/TLS, OAuth 2.0' }
+     ]
+   },
+   servispozitif: {
+     name: 'Servis Pozitif',
+     subtitle: 'Teknik Servis Yazılımı',
+     description: 'Teknik servis süreçlerinizi dijitalleştirin, müşteri memnuniyetini artırın ve operasyonel verimliliği yükseltin. Servis Pozitif ile servis kalitesini artırın.',
+     icon: Support,
+     features: [
+       {
+         icon: <Dashboard />,
+         title: 'Servis Talebi Yönetimi',
+         description: 'Servis taleplerini merkezi olarak yönetir.'
+       },
+       {
+         icon: <Timeline />,
+         title: 'Teknik Ekip Takibi',
+         description: 'Teknik ekiplerin konum ve durumunu takip eder.'
+       },
+       {
+         icon: <Settings />,
+         title: 'Parça Yönetimi',
+         description: 'Servis parçalarını stok ve sipariş yönetimi.'
+       },
+       {
+         icon: <Analytics />,
+         title: 'Müşteri İletişimi',
+         description: 'Müşterilerle otomatik iletişim sistemi.'
+       },
+       {
+         icon: <CheckCircle />,
+         title: 'Raporlama',
+         description: 'Detaylı servis raporları oluşturur.'
+       },
+       {
+         icon: <Speed />,
+         title: 'Mobil Uygulama',
+         description: 'Teknik ekipler için mobil uygulama desteği.'
+       }
+     ],
+     benefits: [
+       {
+         icon: <TrendingUp />,
+         title: 'Servis Kalitesini Artırır',
+         description: 'Dijital süreçler ile servis kalitesini artırır.'
+       },
+       {
+         icon: <CheckCircle />,
+         title: 'Müşteri Memnuniyetini Yükseltir',
+         description: 'Hızlı ve kaliteli servis ile memnuniyeti artırır.'
+       },
+       {
+         icon: <Security />,
+         title: 'Operasyonel Verimliliği Artırır',
+         description: 'Otomatik süreçler ile verimliliği artırır.'
+       },
+       {
+         icon: <Speed />,
+         title: 'Maliyetleri Düşürür',
+         description: 'Optimize edilmiş süreçler ile maliyetleri azaltır.'
+       }
+     ],
+     technicalSpecs: [
+       { label: 'Eş Zamanlı Kullanıcı', value: '1,000+' },
+       { label: 'Servis Türleri', value: 'Sınırsız' },
+       { label: 'Mobil Destek', value: 'iOS, Android' },
+       { label: 'Veri Saklama', value: '10 yıl' },
+       { label: 'API Desteği', value: 'REST, SOAP' },
+       { label: 'Güvenlik', value: 'SSL/TLS, 2FA' }
+     ]
+   },
+   lioxerp: {
+     name: 'Liox ERP',
+     subtitle: 'ERP Yazılımı',
+     description: 'Kurumsal kaynak planlama sistemi ile tüm iş süreçlerinizi entegre edin ve verimliliği artırın. Liox ERP ile dijital dönüşümünüzü hızlandırın.',
+     icon: Business,
+     features: [
+       {
+         icon: <Analytics />,
+         title: 'Finans Yönetimi',
+         description: 'Kapsamlı finans ve muhasebe yönetimi.'
+       },
+       {
+         icon: <Timeline />,
+         title: 'İnsan Kaynakları',
+         description: 'Personel yönetimi ve bordro süreçleri.'
+       },
+       {
+         icon: <Settings />,
+         title: 'Üretim Yönetimi',
+         description: 'Üretim planlama ve kontrol sistemi.'
+       },
+       {
+         icon: <Dashboard />,
+         title: 'Satış Yönetimi',
+         description: 'Müşteri ve satış süreçleri yönetimi.'
+       },
+       {
+         icon: <CheckCircle />,
+         title: 'Stok Yönetimi',
+         description: 'Envanter ve stok kontrol sistemi.'
+       },
+       {
+         icon: <Speed />,
+         title: 'Raporlama',
+         description: 'Kapsamlı iş raporları ve analizler.'
+       }
+     ],
+     benefits: [
+       {
+         icon: <TrendingUp />,
+         title: 'Operasyonel Verimliliği Artırır',
+         description: 'Entegre süreçler ile operasyonel verimliliği artırır.'
+       },
+       {
+         icon: <CheckCircle />,
+         title: 'Maliyetleri Düşürür',
+         description: 'Optimize edilmiş süreçler ile maliyetleri azaltır.'
+       },
+       {
+         icon: <Security />,
+         title: 'Veri Tutarlılığı Sağlar',
+         description: 'Merkezi veri yönetimi ile tutarlılık sağlar.'
+       },
+       {
+         icon: <Speed />,
+         title: 'Karar Vermeyi İyileştirir',
+         description: 'Gerçek zamanlı veriler ile karar vermeyi iyileştirir.'
+       }
+     ],
+     technicalSpecs: [
+       { label: 'Modül Sayısı', value: '20+ Modül' },
+       { label: 'Eş Zamanlı Kullanıcı', value: '10,000+' },
+       { label: 'Veri Saklama', value: 'Sınırsız' },
+       { label: 'API Desteği', value: 'REST, SOAP, GraphQL' },
+       { label: 'Güvenlik', value: 'SSL/TLS, 2FA, VPN' },
+       { label: 'Mobil Uygulama', value: 'iOS, Android' }
+     ]
+   },
+   girus: {
+     name: 'Girus',
+     subtitle: 'Kobi Ticari İş Yazılımı',
+     description: 'KOBİler için özel olarak tasarlanmış ticari iş yazılımı ile işletmenizi büyütün. Girus ile iş süreçlerinizi dijitalleştirin.',
+     icon: Store,
+     features: [
+       {
+         icon: <Dashboard />,
+         title: 'Müşteri Yönetimi',
+         description: 'Müşteri bilgilerini ve ilişkilerini yönetir.'
+       },
+       {
+         icon: <Timeline />,
+         title: 'Satış Takibi',
+         description: 'Satış süreçlerini ve performansını takip eder.'
+       },
+       {
+         icon: <Settings />,
+         title: 'Fatura Yönetimi',
+         description: 'Fatura oluşturma ve takip sistemi.'
+       },
+       {
+         icon: <Analytics />,
+         title: 'Stok Kontrolü',
+         description: 'Envanter ve stok yönetimi sistemi.'
+       },
+       {
+         icon: <CheckCircle />,
+         title: 'Raporlama',
+         description: 'İş performansı raporları ve analizler.'
+       },
+       {
+         icon: <Speed />,
+         title: 'Mobil Uygulama',
+         description: 'İşletme sahipleri için mobil uygulama desteği.'
+       }
+     ],
+     benefits: [
+       {
+         icon: <TrendingUp />,
+         title: 'İş Süreçlerini Hızlandırır',
+         description: 'Dijital süreçler ile iş hızını artırır.'
+       },
+       {
+         icon: <CheckCircle />,
+         title: 'Maliyetleri Düşürür',
+         description: 'Otomatik süreçler ile maliyetleri azaltır.'
+       },
+       {
+         icon: <Security />,
+         title: 'Müşteri Memnuniyetini Artırır',
+         description: 'Hızlı ve kaliteli hizmet ile memnuniyeti artırır.'
+       },
+       {
+         icon: <Speed />,
+         title: 'Büyümeyi Destekler',
+         description: 'Ölçeklenebilir yapı ile büyümeyi destekler.'
+       }
+     ],
+     technicalSpecs: [
+       { label: 'Kullanıcı Sayısı', value: '1-100 Kullanıcı' },
+       { label: 'Modül Sayısı', value: '10+ Modül' },
+       { label: 'Veri Saklama', value: '10 yıl' },
+       { label: 'API Desteği', value: 'REST, SOAP' },
+       { label: 'Güvenlik', value: 'SSL/TLS, 2FA' },
+       { label: 'Mobil Uygulama', value: 'iOS, Android' }
+     ]
+   }
+ }; 

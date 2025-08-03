@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import '../../styles/components/Common/header.css';
 import beyesLogo from '../../assets/image/logo/beyes_logo_red.png';
+import kariyerLogo from '../../assets/image/career/Kariyer-logo.png';
 import { navItems } from '../../constants/navigation';
 import Menu from '@mui/icons-material/Menu';
 import Close from '@mui/icons-material/Close';
@@ -12,6 +13,10 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [mobileDropdowns, setMobileDropdowns] = useState({});
   const location = useLocation();
+
+  // Kariyer sayfalarında farklı logo göster
+  const isCareerPage = location.pathname.startsWith('/career');
+  const currentLogo = isCareerPage ? kariyerLogo : beyesLogo;
 
   const handleMouseEnter = (index) => {
     setActiveDropdown(index);
@@ -45,7 +50,7 @@ const Header = () => {
       <div className="header__container">
         <div className="header__logo">
           <Link to="/">
-            <img src={beyesLogo} alt="Beyes Logo" />
+            <img src={currentLogo} alt="Beyes Logo" />
           </Link>
         </div>
 
