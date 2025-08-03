@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/components/rnDSection.css';
+import '../../styles/components/Home/rnDSection.css';
 
 const rndData = [
   {

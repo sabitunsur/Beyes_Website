@@ -1,63 +1,20 @@
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet';
-import '../styles/pages/about.css';
+import React, { useState, useEffect } from 'react';
+import { scrollToTop } from '../../utils/scrollToTop';
+import SEO from '../../components/Common/SEO';
+import { 
+  teamMembersData, 
+  timelineData, 
+  certificatesData, 
+  partnersData 
+} from '../../constants/about';
+import '../../styles/pages/About/about.css';
 
 // Import images
-import aboutHeroBg from '../assets/image/AboutUs/back.png';
-import teamMember1 from '../assets/image/AboutUs/avatar/kerem.png';
-import teamMember2 from '../assets/image/AboutUs/avatar/gozde.png';
-import teamMember3 from '../assets/image/AboutUs/avatar/saygın.png';
-import teamMember4 from '../assets/image/AboutUs/avatar/Cem.png';
-import teamMember5 from '../assets/image/AboutUs/avatar/Gökberk.png';
-import teamMember6 from '../assets/image/AboutUs/avatar/cansu.png';
-
-// Import timeline images
-import timeline2012 from '../assets/image/AboutUs/1.png';
-import timeline2013 from '../assets/image/AboutUs/2.png';
-import timeline2014_2016 from '../assets/image/AboutUs/3.png';
-import timeline2017 from '../assets/image/AboutUs/4.png';
-import timeline2018_2019 from '../assets/image/AboutUs/5.png';
-import timeline2020 from '../assets/image/AboutUs/6.png';
-import timeline2021 from '../assets/image/AboutUs/7.png';
-import timeline2022 from '../assets/image/AboutUs/8.png';
-import timeline2023 from '../assets/image/AboutUs/9.png';
-import timeline2024 from '../assets/image/AboutUs/10.png';
-import timeline2025 from '../assets/image/AboutUs/11.png';
-
-// Import document icons
-import yetkiIcon from '../assets/image/AboutUs/doc/yetki.png';
-import ymIcon from '../assets/image/AboutUs/doc/ym.png';
-import kaliteIcon from '../assets/image/AboutUs/doc/kalite.png';
-
-// Yetki Belgeleri
-import yb1 from '../assets/image/AboutUs/DocContent/yetki/yb1.png';
-import yb2 from '../assets/image/AboutUs/DocContent/yetki/yb2.png';
-
-// Yerli Malı Belgeleri
-import ym1 from '../assets/image/AboutUs/DocContent/yerliMalı/ym1.png';
-import ym2 from '../assets/image/AboutUs/DocContent/yerliMalı/ym2.png';
-import ym3 from '../assets/image/AboutUs/DocContent/yerliMalı/ym3.png';
-import ym4 from '../assets/image/AboutUs/DocContent/yerliMalı/ym4.png';
-
-// Kalite Belgeleri
-import k1 from '../assets/image/AboutUs/DocContent/kalite/k1.png';
-import k2 from '../assets/image/AboutUs/DocContent/kalite/k2.png';
-import k3 from '../assets/image/AboutUs/DocContent/kalite/k3.png';
-import k4 from '../assets/image/AboutUs/DocContent/kalite/k4.png';
-import k5 from '../assets/image/AboutUs/DocContent/kalite/k5.png';
-
-// İş Ortaklarımız ve Üyeliklerimiz Logoları
-import havelsan from '../assets/image/page/logo/havelsan.png';
-import uyumsoft from '../assets/image/page/logo/uyumsoft.png';
-import netas from '../assets/image/page/logo/netaş.png';
-import ibm from '../assets/image/page/logo/ibm.png';
-import hib from '../assets/image/page/logo/hib.png';
-import bgd from '../assets/image/page/logo/bgd.png';
-import htklogo from '../assets/image/page/logo/x.png';
-
+import aboutHeroBg from '../../assets/image/AboutUs/back.png';
 
 // Import icons
-import { ChevronDown, ChevronUp, Shield, Users, Target, Eye, Award, Handshake, Building } from 'lucide-react';
+import { ChevronDown, ChevronUp, Shield, Target, Eye, Award } from 'lucide-react';
+
 
 const About = () => {
   const [activeAccordion, setActiveAccordion] = useState(null);
@@ -72,50 +29,7 @@ const About = () => {
     setActiveTimelineYear(year);
   };
 
-  const teamMembers = [
-    {
-      id: 1,
-      name: 'Kerem Savaş',
-      position: 'Genel Müdür',
-      image: teamMember1,
-      description: 'Genel Müdür'
-    },
-    {
-      id: 2,
-      name: 'Gözde Özkan Dedeoğlu',
-      position: 'Satış & PMO Müdürü',
-      image: teamMember2,
-      description: 'Satış & PMO Müdürü'
-    },
-    {
-      id: 3,
-      name: 'Saygın M. Erdoğan',
-      position: 'Mekanik Sistemler Müdürü',
-      image: teamMember3,
-      description: 'Mekanik Sistemler Müdürü'
-    },
-    {
-      id: 4,
-      name: 'Cem Kadir Şahin',
-      position: 'AR-GE Müdürü',
-      image: teamMember4,
-      description: 'AR-GE Müdürü'
-    },
-    {
-      id: 5,
-      name: 'Gökberk E. Akalın',
-      position: 'Teknik Operasyon Müdürü',
-      image: teamMember5,
-      description: 'Teknik Operasyon Müdürü'
-    },
-    {
-      id: 6,
-      name: 'Cansu Yorulmaz',
-      position: 'İnsan Kaynakları ve İdari İşler Müdürü',
-      image: teamMember6,
-      description: 'İnsan Kaynakları ve İdari İşler Müdürü'
-    }
-  ];
+  const teamMembers = teamMembersData;
 
   const policies = [
     {
@@ -146,18 +60,17 @@ Yukarıda belirtilen haklarınızı kullanmak için kimliğinizi tespit edici ge
     }
   ];
 
+  useEffect(() => {
+    scrollToTop();
+  }, []);
+
   return (
     <>
-      <Helmet>
-        <title>Hakkımızda - Beyes Bilişim Teknolojileri</title>
-        <meta name="description" content="Beyes Bilişim Teknolojileri hakkında detaylı bilgi. 2012'den beri teknoloji sektöründe faaliyet gösteren şirketimizin misyonu, vizyonu ve değerleri." />
-        <meta name="keywords" content="Beyes, hakkımızda, bilişim teknolojileri, yazılım, elektronik, savunma teknolojileri, Ankara" />
-        <meta property="og:title" content="Hakkımızda - Beyes Bilişim Teknolojileri" />
-        <meta property="og:description" content="2012'den beri teknoloji sektöründe faaliyet gösteren Beyes Bilişim Teknolojileri hakkında detaylı bilgi." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://beyes.com.tr/hakkimizda" />
-        <link rel="canonical" href="https://beyes.com.tr/hakkimizda" />
-      </Helmet>
+      <SEO 
+        title="Hakkımızda - Beyes"
+        description="Beyes Bilişim Teknolojileri hakkında detaylı bilgi. 2012'den beri teknoloji sektöründe faaliyet gösteren şirketimizin misyonu, vizyonu ve değerleri."
+        keywords="Beyes, hakkımızda, bilişim teknolojileri, yazılım, elektronik, savunma teknolojileri, Ankara"
+      />
 
       <div className="about-page">
         {/* Hero Section */}
@@ -259,19 +172,7 @@ Yukarıda belirtilen haklarınızı kullanmak için kimliğinizi tespit edici ge
               <div className="timeline-item active">
                 <div className="timeline-image">
                   <img 
-                    src={
-                      activeTimelineYear === '2012' ? timeline2012 :
-                      activeTimelineYear === '2013' ? timeline2013 :
-                      activeTimelineYear === '2014-2016' ? timeline2014_2016 :
-                      activeTimelineYear === '2017' ? timeline2017 :
-                      activeTimelineYear === '2018-2019' ? timeline2018_2019 :
-                      activeTimelineYear === '2020' ? timeline2020 :
-                      activeTimelineYear === '2021' ? timeline2021 :
-                      activeTimelineYear === '2022' ? timeline2022 :
-                      activeTimelineYear === '2023' ? timeline2023 :
-                      activeTimelineYear === '2024' ? timeline2024 :
-                      activeTimelineYear === '2025' ? timeline2025 : timeline2017
-                    } 
+                    src={timelineData[activeTimelineYear]?.image || timelineData['2017'].image} 
                     alt={`${activeTimelineYear} - Timeline`} 
                   />
                 </div>
@@ -428,7 +329,7 @@ Yukarıda belirtilen haklarınızı kullanmak için kimliğinizi tespit edici ge
             <div className="certificates-grid">
               <div className="certificate-card grey">
                 <div className="certificate-icon">
-                  <img src={yetkiIcon} alt="Yetki Belgesi" />
+                  <img src={certificatesData.yetki.icon} alt="Yetki Belgesi" />
                 </div>
                 <h3>Yetki Belgeleri</h3>
                 <button className="view-button" onClick={() => setActiveCertificate('yetki')}>
@@ -437,7 +338,7 @@ Yukarıda belirtilen haklarınızı kullanmak için kimliğinizi tespit edici ge
               </div>
               <div className="certificate-card red">
                 <div className="certificate-icon">
-                  <img src={ymIcon} alt="Yerli Malı Belgesi" />
+                  <img src={certificatesData.ym.icon} alt="Yerli Malı Belgesi" />
                 </div>
                 <h3>Yerli Malı Belgeleri</h3>
                 <button className="view-button" onClick={() => setActiveCertificate('ym')}>
@@ -446,7 +347,7 @@ Yukarıda belirtilen haklarınızı kullanmak için kimliğinizi tespit edici ge
               </div>
               <div className="certificate-card purple">
                 <div className="certificate-icon">
-                  <img src={kaliteIcon} alt="Kalite Belgesi" />
+                  <img src={certificatesData.kalite.icon} alt="Kalite Belgesi" />
                 </div>
                 <h3>Kalite Belgeleri</h3>
                 <button className="view-button" onClick={() => setActiveCertificate('kalite')}>
@@ -474,11 +375,11 @@ Yukarıda belirtilen haklarınızı kullanmak için kimliğinizi tespit edici ge
                       <div className="certificate-documents">
                         <div className="document-item">
                           <h4>I. Kamu Bilişim Yetki Belgesi</h4>
-                          <img src={yb1} alt="Kamu Bilişim Yetki Belgesi" />
+                          <img src={certificatesData.yetki.documents[0].image} alt="Kamu Bilişim Yetki Belgesi" />
                         </div>
                         <div className="document-item">
                           <h4>II. Yazılım Yetki Belgesi</h4>
-                          <img src={yb2} alt="Yazılım Yetki Belgesi" />
+                          <img src={certificatesData.yetki.documents[1].image} alt="Yazılım Yetki Belgesi" />
                         </div>
                       </div>
                     )}
@@ -486,19 +387,19 @@ Yukarıda belirtilen haklarınızı kullanmak için kimliğinizi tespit edici ge
                       <div className="certificate-documents">
                         <div className="document-item">
                           <h4>I. Yerli Malı Belgesi 1</h4>
-                          <img src={ym1} alt="Yerli Malı Belgesi 1" />
+                          <img src={certificatesData.ym.documents[0].image} alt="Yerli Malı Belgesi 1" />
                         </div>
                         <div className="document-item">
                           <h4>II. Yerli Malı Belgesi 2</h4>
-                          <img src={ym2} alt="Yerli Malı Belgesi 2" />
+                          <img src={certificatesData.ym.documents[1].image} alt="Yerli Malı Belgesi 2" />
                         </div>
                         <div className="document-item">
                           <h4>III. Yerli Malı Belgesi 3</h4>
-                          <img src={ym3} alt="Yerli Malı Belgesi 3" />
+                          <img src={certificatesData.ym.documents[2].image} alt="Yerli Malı Belgesi 3" />
                         </div>
                         <div className="document-item">
                           <h4>IV. Yerli Malı Belgesi 4</h4>
-                          <img src={ym4} alt="Yerli Malı Belgesi 4" />
+                          <img src={certificatesData.ym.documents[3].image} alt="Yerli Malı Belgesi 4" />
                         </div>
                       </div>
                     )}
@@ -506,23 +407,23 @@ Yukarıda belirtilen haklarınızı kullanmak için kimliğinizi tespit edici ge
                       <div className="certificate-documents">
                         <div className="document-item">
                           <h4>I. ISO 15504 SPICE</h4>
-                          <img src={k1} alt="ISO 15504 SPICE" />
+                          <img src={certificatesData.kalite.documents[0].image} alt="ISO 15504 SPICE" />
                         </div>
                         <div className="document-item">
                           <h4>II. ISO 27001-2013</h4>
-                          <img src={k2} alt="ISO 27001-2013" />
+                          <img src={certificatesData.kalite.documents[1].image} alt="ISO 27001-2013" />
                         </div>
                         <div className="document-item">
                           <h4>III. ISO 9001:2015</h4>
-                          <img src={k3} alt="ISO 9001:2015" />
+                          <img src={certificatesData.kalite.documents[2].image} alt="ISO 9001:2015" />
                         </div>
                         <div className="document-item">
                           <h4>IV. ISO 14001:2015</h4>
-                          <img src={k4} alt="ISO 14001:2015" />
+                          <img src={certificatesData.kalite.documents[3].image} alt="ISO 14001:2015" />
                         </div>
                         <div className="document-item">
                           <h4>V. ISO 45001-2018</h4>
-                          <img src={k5} alt="ISO 45001-2018" />
+                          <img src={certificatesData.kalite.documents[4].image} alt="ISO 45001-2018" />
                         </div>
                       </div>
                     )}
@@ -541,16 +442,16 @@ Yukarıda belirtilen haklarınızı kullanmak için kimliğinizi tespit edici ge
                 <h3>İş Ortaklarımız</h3>
                 <div className="partners-grid">
                   <div className="partner-logo">
-                    <img src={havelsan} alt="HAVELSAN" />
+                    <img src={partnersData.havelsan} alt="HAVELSAN" />
                   </div>
                   <div className="partner-logo">
-                    <img src={uyumsoft} alt="UYUMSOFT" />
+                    <img src={partnersData.uyumsoft} alt="UYUMSOFT" />
                   </div>
                   <div className="partner-logo">
-                    <img src={netas} alt="NETAS" />
+                    <img src={partnersData.netas} alt="NETAS" />
                   </div>
                   <div className="partner-logo">
-                    <img src={ibm} alt="IBM" />
+                    <img src={partnersData.ibm} alt="IBM" />
                   </div>
                 </div>
               </div>
@@ -558,13 +459,13 @@ Yukarıda belirtilen haklarınızı kullanmak için kimliğinizi tespit edici ge
                 <h3>Üyeliklerimiz</h3>
                 <div className="partners-grid">
                   <div className="partner-logo">
-                    <img src={hib} alt="HİB" />
+                    <img src={partnersData.hib} alt="HİB" />
                   </div>
                   <div className="partner-logo">
-                    <img src={bgd} alt="BİLGİ GÜVENLİĞİ DERNEĞİ" />
+                    <img src={partnersData.bgd} alt="BİLGİ GÜVENLİĞİ DERNEĞİ" />
                   </div>
                   <div className="partner-logo">
-                    <img src={htklogo} alt="HTK" />
+                    <img src={partnersData.htklogo} alt="HTK" />
                   </div>
                 </div>
               </div>

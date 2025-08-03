@@ -1,6 +1,6 @@
 import React from 'react';
-import '../styles/components/heroSection.css';
-import bgVideo from '../assets/video/bg-firstv.mp4';
+import '../../styles/components/Home/heroSection.css';
+import bgVideo from '../../assets/video/bg-firstv.mp4';
 
 const HeroSection = () => {
   return (

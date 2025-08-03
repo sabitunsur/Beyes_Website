@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/components/aboutSection.css';
+import '../../styles/components/Home/aboutSection.css';
 import { Link } from 'react-router-dom';
 
 const AboutSection = () => {
@@ -22,7 +22,7 @@ const AboutSection = () => {
             ürünlerin gelişimi canlı bir yaşam döngüsü sayesinde aktif tutulmaktadır.
           </p>
           <div className="about__buttons">
-            <Link to="/hakkimizda" className="about__btn about__btn--red">Hakkımızda</Link>
+            <Link to="/about" className="about__btn about__btn--red">Hakkımızda</Link>
             <Link to="/career/life-at-beyes" className="about__btn about__btn--bordered">Bize Katıl</Link>
           </div>
         </div>

@@ -1,17 +1,17 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import '../styles/components/productsSection.css';
+import '../../styles/components/Home/productsSection.css';
 
-import beSens from '../assets/image/products/besens.png';
-import beRoad from '../assets/image/products/beroad.png';
-import bePlay from '../assets/image/products/beplay.png';
-import bePopup from '../assets/image/products/bepopup.png';
-import bePower from '../assets/image/products/bepower.png';
-import beBoss from '../assets/image/products/beboss.png';
-import servisPozitif from '../assets/image/products/servispozitif.png';
-import girus from '../assets/image/products/girus.png';
-import liox from '../assets/image/products/liox.png';
-import nosi from '../assets/image/products/nosi.png';
+import beSens from '../../assets/image/products/besens.png';
+import beRoad from '../../assets/image/products/beroad.png';
+import bePlay from '../../assets/image/products/beplay.png';
+import bePopup from '../../assets/image/products/bepopup.png';
+import bePower from '../../assets/image/products/bepower.png';
+import beBoss from '../../assets/image/products/beboss.png';
+import servisPozitif from '../../assets/image/products/servispozitif.png';
+import girus from '../../assets/image/products/girus.png';
+import liox from '../../assets/image/products/liox.png';
+import nosi from '../../assets/image/products/nosi.png';
 
 const products = [
   { id: 1, name: 'BeSens', logo: beSens, description: 'Akıllı titreşim sensörü ve tahmine dayalı bakım platformu.' },
@@ -25,8 +25,6 @@ const products = [
   { id: 9, name: 'Liox', logo: liox, description: 'Lojistik ve tedarik zinciri optimizasyonu.' },
   { id: 10, name: 'Nosi', logo: nosi, description: 'Kapalı sistem mimarisi ile güvenli yapay zeka asistanı.' }
 ];
-
-console.log(products.length);
 
 const ProductsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import '../styles/components/footer.css';
-import beyesLogo from '../assets/image/logo/beyes-logo.png';
+import '../../styles/components/Common/footer.css';
+import beyesLogo from '../../assets/image/logo/beyes-logo.png';
 import { LocationOn, Phone, Email, Notifications } from '@mui/icons-material';
 
 const Footer = () => {

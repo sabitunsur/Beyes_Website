@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import '../styles/components/solutionsSection.css';
+import '../../styles/components/Home/solutionsSection.css';
 
-import aiBackImg from '../assets/image/solutions/ai-back.png';
-import defenseImg from '../assets/image/solutions/defense.jpg';
-import ictImg from '../assets/image/solutions/ict.jpg';
-import profImg from '../assets/image/solutions/professional-services.jpg';
+import aiBackImg from '../../assets/image/solutions/ai-back.png';
+import defenseImg from '../../assets/image/solutions/defense.jpg';
+import ictImg from '../../assets/image/solutions/ict.jpg';
+import profImg from '../../assets/image/solutions/professional-services.jpg';
 
 const cards = [
   {

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowLeft, Users, Coffee, Building, Heart, Check, ArrowRight, GraduationCap, BookOpen, Users2, Globe, Award, Gift, Shield, Calendar } from 'lucide-react';
-import '../../styles/pages/lifeAtBeyesDetails.css';
+import { Users, Coffee, Building, Heart, Check, GraduationCap, BookOpen, Users2, Globe } from 'lucide-react';
+import '../../styles/pages/Career/lifeAtBeyesDetails.css';
 
 const LifeAtBeyesDetails = () => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
@@ -103,14 +103,6 @@ const LifeAtBeyesDetails = () => {
 
   return (
     <div className="career-details">
-      {/* Header */}
-      <header className="career-header">
-        <button className="back-button">
-          <ArrowLeft />
-          <span>Geri Dön</span>
-        </button>
-      </header>
-
       {/* Hero Section */}
       <section className="hero-section">
         <div className="hero-container">

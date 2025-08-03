@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { scrollToTop } from '../../utils/scrollToTop';
 import { 
   Flight, 
   Work, 
@@ -8,7 +9,6 @@ import {
   Shield,
   Hub,
   Analytics,
-  Security,
   Cloud,
   Code,
   Rocket,
@@ -23,17 +23,15 @@ import {
   Monitor,
   Settings,
   Support,
-  PsychologyAlt,
   Memory,
-  TrendingUp
 } from '@mui/icons-material';
 
-import '../styles/pages/solutions.css';
+import '../../styles/pages/Solutions/solutions.css';
 
 const Solutions = () => {
   // Sayfa yüklendiğinde en üste scroll yap
   useEffect(() => {
-    window.scrollTo(0, 0);
+    scrollToTop();
   }, []);
 
   const solutions = [
@@ -43,6 +41,7 @@ const Solutions = () => {
       icon: <Psychology />,
       description: 'Gelişmiş yapay zeka çözümleri ile işletmenizi geleceğe taşıyın',
       color: '#d32f2f',
+      gradient: 'linear-gradient(135deg, #d32f2f 0%, #b71c1c 100%)',
       features: [
         { name: 'Alarm Tahminleme', icon: <Memory /> },
         { name: 'Anomali Tespiti', icon: <Analytics /> },
@@ -59,6 +58,7 @@ const Solutions = () => {
       icon: <Flight />,
       description: 'Savunma ve havacılık sektörü için özel teknoloji çözümleri',
       color: '#1976d2',
+      gradient: 'linear-gradient(135deg, #1976d2 0%, #1565c0 100%)',
       features: [
         { name: 'Drone Kontrol Sistemleri', icon: <SmartToy /> },
         { name: 'Radar Teknolojileri', icon: <Radio /> },
@@ -75,6 +75,7 @@ const Solutions = () => {
       icon: <Dns />,
       description: 'Modern ICT çözümleri ile dijital dönüşümünüzü hızlandırın',
       color: '#388e3c',
+      gradient: 'linear-gradient(135deg, #388e3c 0%, #2e7d32 100%)',
       features: [
         { name: 'Ağ Altyapısı', icon: <Hub /> },
         { name: 'Veri Merkezi Çözümleri', icon: <Dns /> },
@@ -91,6 +92,7 @@ const Solutions = () => {
       icon: <Work />,
       description: 'Uzman ekibimizle projelerinizi başarıya ulaştırın',
       color: '#f57c00',
+      gradient: 'linear-gradient(135deg, #f57c00 0%, #ef6c00 100%)',
       features: [
         { name: 'Danışmanlık Hizmetleri', icon: <Support /> },
         { name: 'Proje Yönetimi', icon: <Settings /> },
@@ -127,8 +129,10 @@ const Solutions = () => {
             {solutions.map((solution) => (
               <div key={solution.id} className="solution-card" id={solution.id}>
                 <div className="solution-card-header">
-                  <div className="solution-icon" style={{ backgroundColor: solution.color }}>
-                    {solution.icon}
+                  <div className="solution-icon" style={{ background: solution.gradient }}>
+                    <div style={{ color: 'white' }}>
+                      {solution.icon}
+                    </div>
                   </div>
                   <h2 className="solution-title">{solution.title}</h2>
                   <p className="solution-description">{solution.description}</p>
@@ -149,7 +153,7 @@ const Solutions = () => {
                 </div>
 
                 <div className="solution-cta">
-                  <Link to={`/solutions/${solution.id}`} className="solution-detail-btn">
+                  <Link to={`/solutions/${solution.id}`} className="solution-detail-btn" style={{ background: solution.color }}>
                     Detaylı Bilgi
                     <ArrowForward />
                   </Link>

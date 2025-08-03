@@ -1,12 +1,12 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Home from './pages/Home';
-import About from './pages/About';
-import Solutions from './pages/Solutions';
-import Products from './pages/Products';
+import Header from './components/Common/Header';
+import Footer from './components/Common/Footer';
+import Home from './pages/Home/Home';
+import About from './pages/About/About';
+import Solutions from './pages/Solutions/Solutions';
+import Products from './pages/Products/Products';
 import Heysem from './pages/Products/Heysem';
 import SCNMS from './pages/Products/SCNMS';
 import Ofcomto from './pages/Products/Ofcomto';

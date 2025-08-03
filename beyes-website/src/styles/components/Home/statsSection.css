@@ -1,6 +1,6 @@
 /* Stats Section Styles - Clean Design */
 .statsSection {
-  background: url('../../assets/image/home/countbg.jpeg') no-repeat center center;
+  background: url('../../../assets/image/home/countbg.jpeg') no-repeat center center;
   background-size: cover;
   color: white;
   padding: 6rem 0;

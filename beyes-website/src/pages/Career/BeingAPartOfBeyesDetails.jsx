@@ -1,6 +1,6 @@
 import React from 'react';
-import { ArrowLeft, ArrowRight, Users, FileText, Calendar, CheckCircle, Building, GraduationCap, Users2 } from 'lucide-react';
-import '../../styles/pages/beingAPartOfBeyesDetails.css';
+import { ArrowRight, Users, FileText, Calendar, CheckCircle, Building, GraduationCap, Users2 } from 'lucide-react';
+import '../../styles/pages/Career/beingAPartOfBeyesDetails.css';
 
 // Import images
 import first from '../../assets/image/contact/first.png';

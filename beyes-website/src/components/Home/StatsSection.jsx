@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import '../styles/components/statsSection.css';
+import '../../styles/components/Home/statsSection.css';
 import { FaUsers, FaProjectDiagram, FaBox, FaUserFriends, FaClock, FaFlask } from 'react-icons/fa';
 
 const statsData = [

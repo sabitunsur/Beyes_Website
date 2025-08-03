@@ -1,4 +1,5 @@
 /* Solutions Page Styles */
+
 .solutions-page {
   min-height: 100vh;
   background: #f8f9fa;
@@ -18,11 +19,23 @@
   padding: 0 2rem;
 }
 
+.solutions-hero-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 .solutions-hero-title {
   font-size: 3.5rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.solutions-hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  opacity: 0.9;
 }
 
 .solutions-hero-description {
@@ -31,6 +44,29 @@
   max-width: 800px;
   margin: 0 auto;
   opacity: 0.95;
+}
+
+.solutions-hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 40px;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  font-size: 1rem;
+  opacity: 0.8;
 }
 
 /* Solutions Grid Section */
@@ -97,9 +133,16 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto 1.5rem;
+  background: linear-gradient(135deg, #d32f2f 0%, #b71c1c 100%);
   color: white;
   font-size: 2rem;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.solution-icon svg {
+  width: 40px;
+  height: 40px;
+  color: white;
 }
 
 .solution-title {
@@ -160,11 +203,15 @@
   justify-content: center;
   flex-shrink: 0;
   margin-right: 8px;
+  background: #f8f9fa;
+  border-radius: 50%;
+  color: #6c757d;
 }
 
 .feature-icon svg {
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
+  color: #6c757d;
 }
 
 .feature-name {
@@ -172,7 +219,7 @@
   font-weight: 500;
   color: #333;
   line-height: 1.3;
-  text-align: left;
+  text-align: center;
   flex: 1;
 }
 
@@ -226,6 +273,11 @@
   text-align: center;
 }
 
+.solutions-cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 .solutions-cta-title {
   font-size: 2.5rem;
   font-weight: 700;
@@ -272,6 +324,8 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+  cursor: pointer;
+  border: none;
 }
 
 .solutions-cta-btn-primary {
@@ -295,6 +349,17 @@
 .solutions-cta-btn-secondary:hover {
   background: white;
   color: #333;
+  transform: translateY(-2px);
+}
+
+.solutions-cta-btn-outline {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.solutions-cta-btn-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
   transform: translateY(-2px);
 }
 
@@ -323,8 +388,17 @@
     font-size: 2.5rem;
   }
   
+  .solutions-hero-subtitle {
+    font-size: 1.2rem;
+  }
+  
   .solutions-hero-description {
     font-size: 1.1rem;
+  }
+  
+  .solutions-hero-stats {
+    flex-direction: column;
+    gap: 30px;
   }
   
   .solution-title {
@@ -352,6 +426,10 @@
 }
 
 @media (max-width: 480px) {
+  .solutions-hero {
+    padding: 4rem 0;
+  }
+  
   .solutions-hero-title {
     font-size: 2rem;
   }
@@ -389,4 +467,65 @@
   .solutions-cta-description {
     font-size: 1rem;
   }
+}
+
+/* AI Technologies Card Icons */
+#ai .feature-icon {
+  color: #d32f2f !important;
+  background: rgba(211, 47, 47, 0.1) !important;
+}
+
+#ai .feature-icon svg {
+  color: #d32f2f !important;
+}
+
+/* Defense Technologies Card Icons */
+#defense .feature-icon {
+  color: #1976d2 !important;
+  background: rgba(25, 118, 210, 0.1) !important;
+}
+
+#defense .feature-icon svg {
+  color: #1976d2 !important;
+}
+
+/* ICT Technologies Card Icons */
+#ict .feature-icon {
+  color: #388e3c !important;
+  background: rgba(56, 142, 60, 0.1) !important;
+}
+
+#ict .feature-icon svg {
+  color: #388e3c !important;
+}
+
+/* Professional Services Card Icons */
+#professional-services .feature-icon {
+  color: #f57c00 !important;
+  background: rgba(245, 124, 0, 0.1) !important;
+}
+
+#professional-services .feature-icon svg {
+  color: #f57c00 !important;
+}
+
+/* Hover effects için ek stiller */
+#ai .feature-item:hover .feature-icon {
+  background: rgba(211, 47, 47, 0.2) !important;
+  transform: scale(1.1);
+}
+
+#defense .feature-item:hover .feature-icon {
+  background: rgba(25, 118, 210, 0.2) !important;
+  transform: scale(1.1);
+}
+
+#ict .feature-item:hover .feature-icon {
+  background: rgba(56, 142, 60, 0.2) !important;
+  transform: scale(1.1);
+}
+
+#professional-services .feature-item:hover .feature-icon {
+  background: rgba(245, 124, 0, 0.2) !important;
+  transform: scale(1.1);
 }
