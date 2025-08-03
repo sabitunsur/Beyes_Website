@@ -143,7 +143,7 @@ const LifeAtBeyesDetails = () => {
       <section className="workplace-section">
         <div className="workplace-container">
           <div className="section-header">
-            <h2 className="section-title">
+            <h2 className="section-title" style={{ color: 'white' }}>
               Çalışma <span className="section-title-highlight">Ortamımız</span>
             </h2>
             <p className="section-description">
@@ -176,7 +176,7 @@ const LifeAtBeyesDetails = () => {
       <section className="development-section">
         <div className="development-container">
           <div className="section-header">
-            <h2 className="section-title">
+            <h2 className="section-title" style={{ color: 'white' }}>
               Gelişim <span className="section-title-highlight">Fırsatları</span>
             </h2>
             <p className="section-description">
@@ -204,7 +204,7 @@ const LifeAtBeyesDetails = () => {
       <section className="benefits-section">
         <div className="benefits-container">
           <div className="section-header">
-            <h2 className="section-title">
+           <h2 className="section-title" style={{ color: 'white' }}>
               Sağladığımız <span className="section-title-highlight">Avantajlar</span> ve Yan Haklar
             </h2>
           </div>
