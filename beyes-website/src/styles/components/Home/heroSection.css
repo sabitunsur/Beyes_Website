@@ -1,4 +1,9 @@
-/* Hero Section Styles - Clean Design */
+/**
+ * Hero Section Component Styles
+ * Modern ve responsive hero section tasarımı
+ */
+
+/* ===== HERO MAIN CONTAINER ===== */
 .hero {
   position: relative;
   height: 100vh;
@@ -6,9 +11,10 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  background: linear-gradient(135deg, var(--color-dark-bg) 0%, var(--color-dark-bg-secondary) 100%);
 }
 
+/* ===== VIDEO BACKGROUND ===== */
 .hero__video {
   position: absolute;
   top: 0;
@@ -20,61 +26,96 @@
   opacity: 0.8;
 }
 
+/* ===== HERO CONTENT ===== */
 .hero__overlay {
   position: relative;
   z-index: 3;
   text-align: center;
-  color: white;
+  color: var(--color-white);
   max-width: 900px;
-  padding: 0 2rem;
+  padding: 0 var(--space-8);
 }
 
 .hero__title {
-  font-size: 4rem;
-  font-weight: 800;
-  margin-bottom: 1.5rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  line-height: 1.1;
-  color: white;
+  font-size: var(--font-size-6xl);
+  font-weight: var(--font-weight-black);
+  margin-bottom: var(--space-6);
+  text-shadow: var(--text-shadow-xl);
+  line-height: var(--line-height-tight);
+  color: var(--color-white);
+  letter-spacing: -0.025em;
 }
 
 .hero__subtitle {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--space-8);
   opacity: 0.9;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  line-height: 1.4;
-  font-weight: 300;
-  color: white;
+  text-shadow: var(--text-shadow);
+  line-height: var(--line-height-relaxed);
+  font-weight: var(--font-weight-light);
+  color: var(--color-white);
 }
 
-/* Responsive Design */
+/* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 1200px) {
   .hero__title {
-    font-size: 3.5rem;
+    font-size: var(--font-size-5xl);
   }
   
   .hero__subtitle {
-    font-size: 1.3rem;
+    font-size: var(--font-size-lg);
   }
 }
 
 @media (max-width: 768px) {
+  .hero__overlay {
+    padding: 0 var(--space-4);
+  }
+  
   .hero__title {
-    font-size: 2.5rem;
+    font-size: var(--font-size-4xl);
+    margin-bottom: var(--space-4);
   }
   
   .hero__subtitle {
-    font-size: 1.1rem;
+    font-size: var(--font-size-base);
+    margin-bottom: var(--space-6);
   }
 }
 
 @media (max-width: 480px) {
   .hero__title {
-    font-size: 2rem;
+    font-size: var(--font-size-3xl);
   }
   
   .hero__subtitle {
-    font-size: 1rem;
+    font-size: var(--font-size-sm);
+  }
+}
+
+/* ===== ACCESSIBILITY ===== */
+@media (prefers-reduced-motion: reduce) {
+  .hero__video {
+    animation: none;
+  }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+  .hero {
+    height: auto;
+    min-height: 300px;
+    background: var(--color-gray-100);
+    color: var(--color-black);
+  }
+  
+  .hero__video {
+    display: none;
+  }
+  
+  .hero__title,
+  .hero__subtitle {
+    color: var(--color-black);
+    text-shadow: none;
   }
 }

@@ -124,7 +124,7 @@
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  color: #d32f2f;
+  color: white !important;
 }
 
 .section-title-highlight {

@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import '../../styles/components/Common/header.css';
 import beyesLogo from '../../assets/image/logo/beyes_logo_red.png';
 import kariyerLogo from '../../assets/image/career/Kariyer-logo.png';
 import { navItems } from '../../constants/navigation';
@@ -12,6 +11,7 @@ const Header = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [mobileDropdowns, setMobileDropdowns] = useState({});
+  const [timeoutId, setTimeoutId] = useState(null); // Timeout ID'sini takip etmek için
   const location = useLocation();
 
   // Kariyer sayfalarında farklı logo göster
@@ -19,10 +19,30 @@ const Header = () => {
   const currentLogo = isCareerPage ? kariyerLogo : beyesLogo;
 
   const handleMouseEnter = (index) => {
+    // Eğer bekleyen bir timeout varsa iptal et
+    if (timeoutId) {
+      clearTimeout(timeoutId);
+      setTimeoutId(null);
+    }
     setActiveDropdown(index);
   };
 
   const handleMouseLeave = () => {
+    // Önceki timeout'u iptal et
+    if (timeoutId) {
+      clearTimeout(timeoutId);
+    }
+    
+    // Yeni timeout başlat
+    const newTimeoutId = setTimeout(() => {
+      setActiveDropdown(null);
+      setTimeoutId(null);
+    }, 300);
+    
+    setTimeoutId(newTimeoutId);
+  };
+
+  const handleDropdownClick = () => {
     setActiveDropdown(null);
   };
 
@@ -45,6 +65,15 @@ const Header = () => {
     setMobileDropdowns({});
   };
 
+  // Component unmount olduğunda timeout'u temizle
+  useEffect(() => {
+    return () => {
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
+    };
+  }, [timeoutId]);
+
   return (
     <header className="header">
       <div className="header__container">
@@ -66,11 +95,15 @@ const Header = () => {
               >
                 <Link to={item.href}>{item.label}</Link>
                 {item.submenu && (
-                  <div className={`dropdown-menu ${activeDropdown === index ? 'active' : ''}`}>
+                  <div 
+                    className={`dropdown-menu ${activeDropdown === index ? 'active' : ''}`}
+                    onMouseEnter={() => handleMouseEnter(index)}
+                    onMouseLeave={handleMouseLeave}
+                  >
                     <ul>
                       {item.submenu.map((subItem) => (
                         <li key={subItem.label}>
-                          <Link to={subItem.href}>
+                          <Link to={subItem.href} onClick={handleDropdownClick}>
                             {subItem.icon && (
                               <span className="icon">
                                 {subItem.icon}

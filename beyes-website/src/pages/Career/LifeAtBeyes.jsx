@@ -8,7 +8,7 @@ import '../../styles/pages/Career/lifeAtBeyes.css';
 
 const LifeAtBeyes = () => {
   const pageData = careerPageData.lifeAtBeyes;
-
+  scrollToTop(); // Sayfa yüklendiğinde en üste kaydır
   return (
     <>
       <SEO 

@@ -417,7 +417,7 @@ section {
 .timeline-item {
   background: white;
   border-radius: 20px;
-  padding: 3rem;
+  padding: 3rem 3rem 3rem 6rem; /* Sol padding'i artırdık logo için yer açmak için */
   margin-bottom: 3rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   position: relative;
@@ -431,11 +431,11 @@ section {
 }
 
 .timeline-image {
-  position: absolute;
+  position: absolute; 
   top: -30px;
   left: -30px;
-  width: 120px;
-  height: 120px;
+  width: 100px; 
+  height: 100px;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -443,6 +443,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 5; /* Z-index ekledik */
 }
 
 .timeline-image img {
@@ -1162,7 +1163,14 @@ section {
   }
   
   .timeline-item {
-    padding: 2rem;
+    padding: 2rem 2rem 2rem 4rem; /* Mobile'da da sol padding korunmalı */
+  }
+  
+  .timeline-image {
+    width: 80px; /* Mobile'da daha küçük */
+    height: 80px;
+    left: -20px; /* Sağa kaydırıldı */
+    top: -10px; /* Üste çıkarıldı */
   }
   
   .timeline-dots {
@@ -1269,7 +1277,14 @@ section {
   }
   
   .timeline-item {
-    padding: 1.5rem;
+    padding: 1.5rem 1.5rem 1.5rem 3.5rem; /* Küçük ekranlarda daha az padding */
+  }
+  
+  .timeline-image {
+    width: 60px; /* En küçük boyut */
+    height: 60px;
+    left: -15px; /* Sağa kaydırıldı */
+    top: -15px; /* Üste çıkarıldı */
   }
   
   .timeline-icon {

@@ -56,42 +56,42 @@ export const teamMembersData = [
     name: 'Kerem Savaş',
     position: 'Genel Müdür',
     image: teamMember1,
-    description: 'Genel Müdür'
+    //description: 'Genel Müdür'
   },
   {
     id: 2,
     name: 'Gözde Özkan Dedeoğlu',
     position: 'Satış & PMO Müdürü',
     image: teamMember2,
-    description: 'Satış & PMO Müdürü'
+    //description: 'Satış & PMO Müdürü'
   },
   {
     id: 3,
     name: 'Saygın M. Erdoğan',
     position: 'Mekanik Sistemler Müdürü',
     image: teamMember3,
-    description: 'Mekanik Sistemler Müdürü'
+    //description: 'Mekanik Sistemler Müdürü'
   },
   {
     id: 4,
-    name: 'Cem Özkan',
-    position: 'Yazılım Sistemleri Müdürü',
+    name: 'Cem Kadir Şahin',
+    position: 'AR-GE Müdürü',
     image: teamMember4,
-    description: 'Yazılım Sistemleri Müdürü'
+   // description: 'AR-GE Müdürü'
   },
   {
     id: 5,
-    name: 'Gökberk Özkan',
-    position: 'Elektrik Sistemleri Müdürü',
+    name: 'Gökberk E. Akalın',
+    position: 'Teknik Operasyon Müdürü',
     image: teamMember5,
-    description: 'Elektrik Sistemleri Müdürü'
+    //description: 'Teknik Operasyon Müdürü'
   },
   {
     id: 6,
-    name: 'Cansu Özkan',
-    position: 'İnsan Kaynakları Müdürü',
+    name: 'Cansu Yorulmaz',
+    position: 'İnsan Kaynakları ve İdari İşler Müdürü',
     image: teamMember6,
-    description: 'İnsan Kaynakları Müdürü'
+    // description: 'İnsan Kaynakları ve İdari İşler Müdürü'
   }
 ];
 

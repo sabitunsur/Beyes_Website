@@ -64,14 +64,6 @@
   margin-bottom: 10px; /* Paragraf ile buton arasındaki boşluğu azaltmak için */
 }
 
-.hero-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-left: 2rem;
-  margin-top: 0; /* Üst boşluğu sıfırladım */
-}
-
 .hero-title {
   font-size: 3.5rem;
   font-weight: 700;
@@ -81,9 +73,11 @@
 
 .hero-buttons {
   display: flex;
+  flex-direction: column;
   gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
+  margin-left: 2rem;
+  margin-top: 0; /* Üst boşluğu sıfırladım */
+  align-items: flex-start;
 }
 
 .btn {
@@ -327,3 +321,20 @@
     padding: 0.4rem 0.8rem;
   }
 }
+
+/* Life At specific mobile styles */
+@media (max-width: 768px) {
+  .life-at-page .life-at-buttons {
+    margin-top: -5rem !important;
+    position: relative;
+    z-index: 10;
+  }
+
+  /* Hero buttons responsive düzeni */
+  .hero-buttons {
+    margin-left: 0 !important;
+    align-items: center;
+    margin-top: 2rem;
+  }
+}
+

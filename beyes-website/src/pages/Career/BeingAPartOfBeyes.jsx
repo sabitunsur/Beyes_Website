@@ -8,7 +8,7 @@ import '../../styles/pages/Career/beingAPartOfBeyes.css';
 
 const BeingAPartOfBeyes = () => {
   const pageData = careerPageData.beingAPartOfBeyes;
-
+  scrollToTop(); // Sayfa yüklendiğinde en üste kaydır
   return (
     <>
       <SEO 

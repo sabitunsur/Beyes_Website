@@ -400,6 +400,8 @@
 @media (max-width: 768px) {
   .being-a-part-of-beyes-hero-title {
     font-size: 2.5rem;
+    display: block !important; /* Mobile'da göster */
+    visibility: visible !important;
   }
   
   .being-a-part-of-beyes-section-title {

@@ -24,6 +24,7 @@
   justify-content: center;
   gap: 3rem;
   flex-wrap: wrap;
+  margin-top: 2rem;
 }
 
 .product-hero-icon {
@@ -131,8 +132,13 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto 1.5rem;
+  background: #d32f2f;
   color: white;
   font-size: 1.5rem;
+}
+
+.feature-icon svg {
+  color: white !important;
 }
 
 .feature-title {
@@ -197,8 +203,13 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto 1.5rem;
+  background: #d32f2f;
   color: white;
   font-size: 1.5rem;
+}
+
+.benefit-icon svg {
+  color: white !important;
 }
 
 .benefit-title {
