@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import beyesLogo from '../../assets/image/logo/beyes_logo_red.png';
 import kariyerLogo from '../../assets/image/career/Kariyer-logo.png';
 import { navItems } from '../../constants/navigation';
@@ -13,10 +13,34 @@ const Header = () => {
   const [mobileDropdowns, setMobileDropdowns] = useState({});
   const [timeoutId, setTimeoutId] = useState(null); // Timeout ID'sini takip etmek için
   const location = useLocation();
+  const navigate = useNavigate();
 
   // Kariyer sayfalarında farklı logo göster
   const isCareerPage = location.pathname.startsWith('/career');
   const currentLogo = isCareerPage ? kariyerLogo : beyesLogo;
+
+  // Smooth scroll için link handler
+  const handleSmoothScroll = (href, e) => {
+    e.preventDefault();
+    
+    if (href.includes('#')) {
+      const [path, hash] = href.split('#');
+      
+      if (path === '/about' && location.pathname === '/about') {
+        const element = document.getElementById(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      } else {
+        // Farklı sayfaya git, sonra scroll yap
+        navigate(href);
+      }
+    } else {
+      navigate(href);
+    }
+    
+    setActiveDropdown(null);
+  };
 
   const handleMouseEnter = (index) => {
     // Eğer bekleyen bir timeout varsa iptal et
@@ -40,10 +64,6 @@ const Header = () => {
     }, 300);
     
     setTimeoutId(newTimeoutId);
-  };
-
-  const handleDropdownClick = () => {
-    setActiveDropdown(null);
   };
 
   const toggleMobileMenu = () => {
@@ -74,6 +94,18 @@ const Header = () => {
     };
   }, [timeoutId]);
 
+  // URL'de hash varsa scroll yap
+  useEffect(() => {
+    if (location.hash) {
+      setTimeout(() => {
+        const element = document.getElementById(location.hash.slice(1));
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  }, [location]);
+
   return (
     <header className="header">
       <div className="header__container">
@@ -103,7 +135,10 @@ const Header = () => {
                     <ul>
                       {item.submenu.map((subItem) => (
                         <li key={subItem.label}>
-                          <Link to={subItem.href} onClick={handleDropdownClick}>
+                          <Link 
+                            to={subItem.href} 
+                            onClick={(e) => handleSmoothScroll(subItem.href, e)}
+                          >
                             {subItem.icon && (
                               <span className="icon">
                                 {subItem.icon}
@@ -158,7 +193,13 @@ const Header = () => {
                     <ul>
                       {item.submenu.map((subItem) => (
                         <li key={subItem.label}>
-                          <Link to={subItem.href} onClick={closeMobileMenu}>
+                          <Link 
+                            to={subItem.href} 
+                            onClick={(e) => {
+                              handleSmoothScroll(subItem.href, e);
+                              closeMobileMenu();
+                            }}
+                          >
                             {subItem.icon && (
                               <span className="icon">
                                 {subItem.icon}

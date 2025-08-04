@@ -86,7 +86,7 @@ Yukarıda belirtilen haklarınızı kullanmak için kimliğinizi tespit edici ge
         </section>
 
         {/* Who We Are Section */}
-        <section className="who-we-are">
+        <section id="who-are-we" className="who-we-are">
           <div className="container">
             <div className="section-header">
               <h2 className="section-title">Biz Kimiz?</h2>
@@ -110,7 +110,7 @@ Yukarıda belirtilen haklarınızı kullanmak için kimliğinizi tespit edici ge
         </section>
 
         {/* Mission Vision Section */}
-        <section className="mission-vision">
+        <section id="mission" className="mission-vision">
           <div className="container">
             <div className="mission-vision-grid">
               <div className="mission-card">
@@ -124,7 +124,7 @@ Yukarıda belirtilen haklarınızı kullanmak için kimliğinizi tespit edici ge
                   konumda yer almak.
                 </p>
               </div>
-              <div className="vision-card">
+              <div className="vision-card" id="vision">
                 <div className="card-icon">
                   <Eye />
                 </div>
@@ -163,7 +163,7 @@ Yukarıda belirtilen haklarınızı kullanmak için kimliğinizi tespit edici ge
         </section>
 
         {/* History Section */}
-        <section className="history-section">
+        <section id="history" className="history-section">
           <div className="container">
             <div className="section-header">
               <h2 className="section-title">Tarihçemiz</h2>
@@ -280,7 +280,7 @@ Yukarıda belirtilen haklarınızı kullanmak için kimliğinizi tespit edici ge
         </section>
 
         {/* Policies Section */}
-        <section className="policies-section">
+        <section id="policies" className="policies-section">
           <div className="container">
             <div className="policies-content">
               <div className="policies-visual">
@@ -321,7 +321,7 @@ Yukarıda belirtilen haklarınızı kullanmak için kimliğinizi tespit edici ge
         </section>
 
         {/* Certificates Section */}
-        <section className="certificates-section">
+        <section id="documents" className="certificates-section">
           <div className="container">
             <div className="section-header">
               <h2 className="section-title">Belgelerimiz</h2>
@@ -435,7 +435,7 @@ Yukarıda belirtilen haklarınızı kullanmak için kimliğinizi tespit edici ge
         </section>
 
         {/* Partners Section */}
-        <section className="partners-section">
+        <section id="partnerships" className="partners-section">
           <div className="container">
             <div className="partners-content">
               <div className="partners-group">
