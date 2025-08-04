@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import beyesLogo from '../../assets/image/logo/beyes_logo_red.png';
 import kariyerLogo from '../../assets/image/career/Kariyer-logo.png';
@@ -6,14 +6,20 @@ import { navItems } from '../../constants/navigation';
 import Menu from '@mui/icons-material/Menu';
 import Close from '@mui/icons-material/Close';
 import ExpandMore from '@mui/icons-material/ExpandMore';
+import { handleSmoothNavigation, handleHashScroll } from '../../utils/navigationUtils';
+import { createDropdownManager } from '../../utils/dropdownUtils';
+import { createMobileMenuManager } from '../../utils/mobileMenuUtils';
 
 const Header = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [mobileDropdowns, setMobileDropdowns] = useState({});
-  const [timeoutId, setTimeoutId] = useState(null); // Timeout ID'sini takip etmek için
   const location = useLocation();
   const navigate = useNavigate();
+
+  // Initialize utility managers
+  const dropdownManager = useMemo(() => createDropdownManager(), []);
+  const mobileMenuManager = useMemo(() => createMobileMenuManager(), []);
 
   // Kariyer sayfalarında farklı logo göster
   const isCareerPage = location.pathname.startsWith('/career');
@@ -21,89 +27,40 @@ const Header = () => {
 
   // Smooth scroll için link handler
   const handleSmoothScroll = (href, e) => {
-    e.preventDefault();
-    
-    if (href.includes('#')) {
-      const [path, hash] = href.split('#');
-      
-      if (path === '/about' && location.pathname === '/about') {
-        const element = document.getElementById(hash);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-      } else {
-        // Farklı sayfaya git, sonra scroll yap
-        navigate(href);
-      }
-    } else {
-      navigate(href);
-    }
-    
+    handleSmoothNavigation(href, location, navigate, e);
     setActiveDropdown(null);
   };
 
   const handleMouseEnter = (index) => {
-    // Eğer bekleyen bir timeout varsa iptal et
-    if (timeoutId) {
-      clearTimeout(timeoutId);
-      setTimeoutId(null);
-    }
-    setActiveDropdown(index);
+    dropdownManager.handleMouseEnter(setActiveDropdown, index);
   };
 
   const handleMouseLeave = () => {
-    // Önceki timeout'u iptal et
-    if (timeoutId) {
-      clearTimeout(timeoutId);
-    }
-    
-    // Yeni timeout başlat
-    const newTimeoutId = setTimeout(() => {
-      setActiveDropdown(null);
-      setTimeoutId(null);
-    }, 300);
-    
-    setTimeoutId(newTimeoutId);
+    dropdownManager.handleMouseLeave(setActiveDropdown);
   };
 
   const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-    if (isMobileMenuOpen) {
-      setMobileDropdowns({});
-    }
+    mobileMenuManager.toggleMobileMenu(isMobileMenuOpen, setIsMobileMenuOpen, setMobileDropdowns);
   };
 
   const toggleMobileDropdown = (index) => {
-    setMobileDropdowns(prev => ({
-      ...prev,
-      [index]: !prev[index]
-    }));
+    mobileMenuManager.toggleMobileDropdown(index, setMobileDropdowns);
   };
 
   const closeMobileMenu = () => {
-    setIsMobileMenuOpen(false);
-    setMobileDropdowns({});
+    mobileMenuManager.closeMobileMenu(setIsMobileMenuOpen, setMobileDropdowns);
   };
 
   // Component unmount olduğunda timeout'u temizle
   useEffect(() => {
     return () => {
-      if (timeoutId) {
-        clearTimeout(timeoutId);
-      }
+      dropdownManager.cleanup();
     };
-  }, [timeoutId]);
+  }, [dropdownManager]);
 
   // URL'de hash varsa scroll yap
   useEffect(() => {
-    if (location.hash) {
-      setTimeout(() => {
-        const element = document.getElementById(location.hash.slice(1));
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, 100);
-    }
+    handleHashScroll(location);
   }, [location]);
 
   return (
