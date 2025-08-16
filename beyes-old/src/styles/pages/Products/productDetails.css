@@ -1,0 +1,513 @@
+/* Product Details Page Styles */
+.product-detail-page {
+  min-height: 100vh;
+  background: #f8f9fa;
+}
+
+/* Hero Section */
+.product-hero {
+  background: linear-gradient(135deg, #d32f2f 0%, #b71c1c 100%);
+  color: white;
+  padding: 6rem 0;
+  text-align: center;
+}
+
+.product-hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.product-hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.product-hero-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 2rem;
+}
+
+.product-hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.product-hero-subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+.product-hero-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.product-hero-stats {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* Features Section */
+.product-features-section {
+  padding: 5rem 0;
+  background: white;
+}
+
+.product-features-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.product-features-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+.product-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.feature-card {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f0f0f0;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  background: #d32f2f;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.feature-icon svg {
+  color: white !important;
+}
+
+.feature-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.feature-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* Benefits Section */
+.product-benefits-section {
+  padding: 5rem 0;
+  background: #f8f9fa;
+}
+
+.product-benefits-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.product-benefits-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+.product-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.benefit-card {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f0f0f0;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.benefit-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  background: #d32f2f;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.benefit-icon svg {
+  color: white !important;
+}
+
+.benefit-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.benefit-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* Technical Specifications */
+.product-specs-section {
+  padding: 5rem 0;
+  background: white;
+}
+
+.product-specs-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.product-specs-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+.product-specs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.spec-item {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.spec-item:hover {
+  background: #e9ecef;
+  transform: translateY(-2px);
+}
+
+.spec-label {
+  font-weight: 600;
+  color: #333;
+  font-size: 1rem;
+}
+
+.spec-value {
+  color: #666;
+  font-size: 1rem;
+}
+
+/* CTA Section */
+.product-cta-section {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #333 0%, #1a1a1a 100%);
+  color: white;
+}
+
+.product-cta-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.product-cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.product-cta-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.product-cta-highlight {
+  color: #d32f2f;
+  position: relative;
+}
+
+.product-cta-highlight::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #d32f2f;
+}
+
+.product-cta-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  opacity: 0.9;
+}
+
+.product-cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.product-cta-btn {
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.product-cta-btn-primary {
+  background: #d32f2f;
+  color: white;
+  box-shadow: 0 4px 15px rgba(211, 47, 47, 0.3);
+}
+
+.product-cta-btn-primary:hover {
+  background: #b71c1c;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(211, 47, 47, 0.4);
+}
+
+.product-cta-btn-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.product-cta-btn-secondary:hover {
+  background: white;
+  color: #333;
+  transform: translateY(-2px);
+}
+
+.product-cta-btn-outline {
+  background: transparent;
+  color: white;
+  border: 2px solid #d32f2f;
+}
+
+.product-cta-btn-outline:hover {
+  background: #d32f2f;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .product-hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .product-hero-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .product-hero-description {
+    font-size: 1rem;
+  }
+  
+  .product-hero-stats {
+    gap: 1.5rem;
+  }
+  
+  .stat-number {
+    font-size: 1.5rem;
+  }
+  
+  .product-features-title,
+  .product-benefits-title,
+  .product-specs-title,
+  .product-cta-title {
+    font-size: 2rem;
+  }
+  
+  .product-features-grid,
+  .product-benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .feature-card,
+  .benefit-card {
+    padding: 1.5rem;
+  }
+  
+  .product-specs-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .product-cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .product-cta-btn {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-hero {
+    padding: 4rem 0;
+  }
+  
+  .product-hero-title {
+    font-size: 2rem;
+  }
+  
+  .product-hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .product-hero-description {
+    font-size: 0.9rem;
+  }
+  
+  .product-hero-stats {
+    gap: 1rem;
+  }
+  
+  .stat-number {
+    font-size: 1.3rem;
+  }
+  
+  .stat-label {
+    font-size: 0.8rem;
+  }
+  
+  .product-features-section,
+  .product-benefits-section,
+  .product-specs-section,
+  .product-cta-section {
+    padding: 3rem 0;
+  }
+  
+  .product-features-title,
+  .product-benefits-title,
+  .product-specs-title,
+  .product-cta-title {
+    font-size: 1.8rem;
+  }
+  
+  .feature-card,
+  .benefit-card {
+    padding: 1.25rem;
+  }
+  
+  .feature-title,
+  .benefit-title {
+    font-size: 1.1rem;
+  }
+  
+  .feature-description,
+  .benefit-description {
+    font-size: 0.9rem;
+  }
+  
+  .spec-item {
+    padding: 1rem;
+  }
+  
+  .spec-label,
+  .spec-value {
+    font-size: 0.9rem;
+  }
+  
+  .product-cta-title {
+    font-size: 1.6rem;
+  }
+  
+  .product-cta-description {
+    font-size: 1rem;
+  }
+} 

@@ -1,0 +1,13 @@
+/**
+ * App Component Styles
+ * Beyes Website - React App Container
+ */
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Global app-level styles sadece buraya */
+/* Component-specific stiller kendi CSS dosyalarında olmalı */

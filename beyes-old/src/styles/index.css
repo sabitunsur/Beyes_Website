@@ -1,0 +1,102 @@
+/**
+ * Main CSS Index File
+ * Beyes Website - Modular CSS Architecture
+ * 
+ * Bu dosya tüm CSS modüllerini doğru sırada import eder
+ * Değişiklik sırası önemlidir!
+ */
+
+/* ===== 1. BASE LAYER ===== */
+/* CSS Variables ve design tokens */
+@import './base/variables.css';
+
+/* CSS reset ve temel stiller */
+@import './base/reset.css';
+
+/* Typography sistem */
+@import './base/typography.css';
+
+/* ===== 2. LAYOUT LAYER ===== */
+/* Layout sistemleri */
+@import './layout/layout.css';
+
+/* ===== 3. UTILITY LAYER ===== */
+/* Utility sınıfları */
+@import './utils/utilities.css';
+
+/* ===== 4. COMPONENT LAYER ===== */
+/* Component stilleri - specificity sırasına göre */
+
+/* UI Components */
+@import './components/ui/button.css';
+@import './components/ui/card.css';
+
+/* Common Components */
+@import './components/Common/header.css';
+@import './components/Common/footer.css';
+
+/* Home Components */
+@import './components/Home/heroSection.css';
+@import './components/Home/aboutSection.css';
+@import './components/Home/productsSection.css';
+@import './components/Home/solutionsSection.css';
+@import './components/Home/statsSection.css';
+@import './components/Home/rnDSection.css';
+
+/* ===== 5. PAGE LAYER ===== */
+/* Page-specific stiller */
+
+/* About Pages */
+@import './pages/About/about.css';
+
+/* AR-GE Pages */
+@import './pages/AR-GE/ar-ge.css';
+@import './pages/AR-GE/ar-geDetails.css';
+
+/* Career Pages */
+@import './pages/Career/beingAPartOfBeyes.css';
+@import './pages/Career/beingAPartOfBeyesDetails.css';
+@import './pages/Career/lifeAtBeyes.css';
+@import './pages/Career/lifeAtBeyesDetails.css';
+
+/* Product Pages */
+@import './pages/Products/products.css';
+@import './pages/Products/productDetails.css';
+
+/* Solution Pages */
+@import './pages/Solutions/solutions.css';
+@import './pages/Solutions/aiTechnologies.css';
+@import './pages/Solutions/defenseTechnologies.css';
+@import './pages/Solutions/ictTechnologies.css';
+@import './pages/Solutions/professionalServices.css';
+
+/* References */
+@import './pages/References/references.css';
+
+/* ===== 6. THEME LAYER ===== */
+/* Theme overrides ve custom styles */
+/* Buraya tema-specific stiller gelecek */
+
+/**
+ * USAGE NOTES:
+ * 
+ * 1. Variables: Tüm renk, boyut, font tanımlamaları variables.css'de
+ * 2. Utilities: Margin, padding, color gibi atomic sınıflar utilities.css'de
+ * 3. Components: Her component kendi dosyasında, BEM methodology kullanarak
+ * 4. Pages: Sayfa-specific stiller ayrı dosyalarda
+ * 
+ * CSS Class Naming Convention:
+ * - Block: .component-name
+ * - Element: .component-name__element
+ * - Modifier: .component-name--modifier
+ * - Utility: .utility-name (örn: .text-center, .mb-4)
+ * 
+ * Responsive Design:
+ * - Mobile-first approach
+ * - Utility sınıflarında responsive prefixler (.md:flex, .lg:grid-cols-3)
+ * 
+ * Performance:
+ * - CSS variables kullanarak runtime değişiklikler
+ * - Autoprefixer için PostCSS yapılandırması
+ * - Critical CSS extraction için hazır yapı
+ */

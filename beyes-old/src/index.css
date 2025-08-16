@@ -1,0 +1,7 @@
+/**
+ * Main Application CSS
+ * Beyes Website - Modular CSS Architecture
+ */
+
+/* Import the complete modular CSS system */
+@import './styles/index.css';
